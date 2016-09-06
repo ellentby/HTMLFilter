@@ -1,22 +1,25 @@
+var identifier = "web/view/";
+
 function fileDealer(text){
   var copy = text;
   var i = 0;
   var file = "";
   var flag = true;
   while(flag){
-    var url = copy.substring(copy.indexOf("web/view/"), copy.indexOf("<"));
+
+    var url = copy.substring(copy.indexOf(identifier), copy.indexOf("<"));
     if(url.indexOf(" ") != -1){
       url = url.substring(0,url.indexOf(" "));
       copy = deleteSpaceInHead(copy.substring(copy.indexOf(" ")));
     }else{
       copy = deleteSpaceInHead(copy.substring(copy.indexOf("<")));
     }
-    if(copy.indexOf("web/view/") == -1){
+    if(copy.indexOf(identifier) == -1){
       var remain = deleteSpaceInHead(copy);
       flag = false;
     }else{
-      var remain = copy.substring(0, copy.indexOf("web/view/"));
-      copy = copy.substring(copy.indexOf("web/view/"));
+      var remain = copy.substring(0, copy.indexOf(identifier));
+      copy = copy.substring(copy.indexOf(identifier));
     }
     var queue = pickUpTags(remain);
     var result = "";
