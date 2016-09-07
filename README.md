@@ -28,4 +28,5 @@ To filter a specific format of file (a mixture of HTML and other string) to a mo
   <li>If you just want to filter a html file, function pickUpTags() and matchUpWithLeft() may also help you.</li>
   <li>This code will remain the comment symbol. If you want to filter this away too, you only need to make a little trick.
   To know how to do that, read the comment in the code.</li>
+  <li>This code will only generate a .txt document. However, you can open it in Excel and save it again.</li>
 </ul>
